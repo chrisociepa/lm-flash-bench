@@ -1,0 +1,10 @@
+{
+    "name": "grammar",
+    "friendly_name": "Grammar",
+    "tasks":  [
+        {"id": 1, "input": "Popraw pisownie w słowie \"grzegżułka\"", "target": {"type": "contains_word", "value": "gżegżółka"}}, 
+        {"id": 2, "input": "Uzupełnij interpunkcję w poniższym zdaniu:\n\nMimo że był którymś z trzech mężczyzn to nic nie mówił. Wiedział że chce iść tam gdzie ci wszyscy którzy mówili mu jak żyć.", "target": {"type": "contains", "value": "mimo że był którymś z trzech mężczyzn, to nic nie mówił. wiedział, że chce iść tam, gdzie ci wszyscy, którzy mówili mu, jak żyć."}},
+        {"id": 3, "input": "Popraw błędy i interpunkcję w podanym zdaniu:\n\nPomimo,że mają psa wzieli kota ze schroniska.", "target": {"type": "contains", "value": "pomimo że mają psa, wzięli kota ze schroniska."}},
+        {"id": 4, "input": "Podaj które słowo w podanym zdaniu pełni rolę orzeczenia. Napisz tylko to słowo i nic więcej.\n\n\"Chętnie pomagam rodzicom w pracach domowych.\"", "target": {"type": "contains_word", "value": "pomagam", "negatives": ["rodzicom", "pracach", "prace"]}}
+    ]
+}

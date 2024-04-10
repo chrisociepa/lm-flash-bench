@@ -1,0 +1,8 @@
+{
+    "name": "extraction",
+    "friendly_name": "Extraction",
+    "tasks":  [
+        {"id": 1, "input": "Utwórz obiekt json opisujący osobę, o której mowa w poniższym tekście. Rekord powinien zawierać 3 pola: `nazwa` (imię i nazwisko), `stanowisko` (stanowisko jakie soba piastuje), `kadencja` (liczba, która mówi która to kadencja na tym stanowisku). Tekst:\n\nPo przeliczeniu wszystkich obwodów Krzysztof Obratański zdjął swój kapelusz, a następnie podrzucił go w kierunku swojego sztabu. Wiemy już, że będzie on rządził miastem i gminą Końskie przez kolejne pięć lat. Dla Obratańskiego rozpoczyna się właśnie piąta kadencja na stanowisku burmistrza naszego miasta.", "target": {"type": "json_contains", "value": {"nazwa": {"type": "exact_match", "value": "Krzysztof Obratański"},"stanowisko": {"type": "contains_word", "value": "burmistrz"},"kadencja": {"type": "exact_match", "value": 5}}}}, 
+        {"id": 2, "input": "Utwórz obiekt json opisujący wynik wyborów, o którym mowa w podanym tekście. JSON ma mieć 2 pola: `KO` (Koalicja Obywatelska) i `PiS` (Prawo i Sprawiedliwość) z wartościami liczbowymi, które reprezentują liczby województw, w których wygrała dana partia. Tekst:\n\nSą już pełne wyniki wyborów do sejmików kilku województw i wciąż spływają nowe informacje. Jak wynika z danych na stronie Państwowej Komisji Wyborczej, w województwie opolskim, kujawsko-pomorskim, lubuskim i śląskim wygrała Koalicja Obywatelska, a w województwie podlaskim, lubelskim i podkarpackim - Prawo i Sprawiedliwość.", "target": {"type": "json_contains", "value": {"KO": {"type": "exact_match", "value": 4}, "PiS": {"type": "exact_match", "value": 3}}}}
+    ]
+}

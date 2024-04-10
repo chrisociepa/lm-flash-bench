@@ -1,0 +1,12 @@
+{
+    "name": "reasoning",
+    "friendly_name": "Reasoning",
+    "tasks":  [
+        {"id": 1, "input": "Franek trzymał w ręce jabłko i butelkę piwa. Następnie wypił piwo, wyrzucił butelkę do kosza, zjadł jabłko i wziął garść malin z koszyczka. Podaj krótko nazwy rzeczy, które trzyma teraz w ręce nasz Franek.", "target": {"type": "contains_word", "values_logical_operator": "or", "values": ["malin", "maliny"], "negatives": ["piwa", "piwo", "jabłko", "jabłka", "papierosa"]}},
+        {"id": 2, "input": "Janusz miał puste ręce kiedy stał na chodniku. Następnie wziął od kolegi do ręki jabcoka o nazwie Jaszczur i dwa kiszone ogórki. Wino wypił, butelke wyrzucił i zagryzł jednym ogóreczkiem. Co teraz trzyma Janusz w rękach? Odpowiedz krótko, podając tylko nazwy rzeczy.", "target": {"type": "contains_word", "value": "ogórka", "negatives": ["jabcoka", "butelkę", "ogórki"]}},
+        {"id": 3, "input": "Jeśli Ala ma kota, Marysia ma rysia, Romek ma domek, a Kuba ma trzy żółwie, to ile razem zwierząt mają dziewczynki? Podaj odpowiedź w postaci cyfry.", "target": {"type": "contains_word", "value": "2"}},
+        {"id": 4, "input": "Adam jest ojcem Jakuba. Jakub ma syna Andrzeja. Tomka wójkiem jest Andrzej. Kim jest Adam dla Andrzeja?", "target": {"type": "contains_word", "values_logical_operator": "or", "values": ["dziadek", "dziadkiem"]}},
+        {"id": 5, "input": "Mam 5 koszulek i 4 koszule. Upranie ich w pralce zajmuje 2 godziny. Ile czasu zajełoby upranie w tej samej pralce tylko 3 koszul? Odpowiedz krótko, podając tylko liczbę godzin w postaci cyfry.", "target": {"type": "contains_word", "value": "2"}}
+    ]
+}
+

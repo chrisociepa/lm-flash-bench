@@ -1,0 +1,11 @@
+{
+    "name": "language",
+    "friendly_name": "Language",
+    "tasks":  [
+        {"id": 1, "input": "Które z podanych poniżej słów jest rymem do słowa 'dziewczęta'? Odpowiedz krótko podając tylko rymujące się słowo.\n\njabłko, baranina, mięta, meta", "target": {"type": "contains_word", "value": "mięta", "negatives": ["jabłko", "baranina", "meta"]}}, 
+        {"id": 2, "input": "Podaj pierwsze i ostatnie słowo w tym zdaniu: \"Pudzian jest często wymieniany wśród najwybitniejszych polskich sportowców w historii.\"", "target": {"type": "contains_word", "values": ["pudzian", "historii"]}},
+        {"id": 3, "input": "Odmień przez przypadki nazwę miasta Końskie", "target": {"type": "contains_word", "values": ["końskie", "końskich", "końskim"], "negative": "końskiego"}},
+        {"id": 4, "input": "Które z podanych słów to wulgaryzmy?\n\nkurwa, pierdolić, motyl, chuj, drabina", "target": {"type": "contains_word", "values": ["kurwa", "pierdolić", "chuj"], "negatives": ["motyl", "drabina"]}},
+        {"id": 5, "input": "Które z podanych słów nie są przymiotnikami? Odpowiedz krótko podając tylko te słowa.\n\njabłkowy, cielęcina, miętowy, głośny, krzykliwy, śliski, niedawno, owocowy", "target": {"type": "contains_word", "values": ["cielęcina", "niedawno"], "negatives": ["jabłkowy", "miętowy", "głośny", "krzykliwy", "śliski", "owocowy"]}}
+    ]
+}

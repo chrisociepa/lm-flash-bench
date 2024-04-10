@@ -1,0 +1,10 @@
+{
+    "name": "math",
+    "friendly_name": "Math",
+    "tasks":  [
+        {"id": 1, "input": "Oblicz ile to jest 2*3+5", "target": {"type": "contains", "value": "11"}},
+        {"id": 2, "input": "Który ułamek jest większy 2/3 czy 3/4? Napisz krótko: \"pierwszy\" dla 2/3 lub \"drugi\" dla 3/4.", "target": {"type": "contains", "value": "drugi"}},
+        {"id": 3, "input": "Jaki jest wynik dodawania sto plus dwieście plus trzysta pięćdziesiąt? Odpowiedź podaj w formie liczby.", "target": {"type": "contains", "value": "650"}},
+        {"id": 4, "input": "Na przystanku stało 1000 autobusów. 500 autobusów odjechało, a następnie przyjechało 350, a potem jeszcze 230 i na koniec 7000. Ile autobusów stoi teraz na przystanku?", "target": {"type": "contains", "value": "8080"}}
+    ]
+}

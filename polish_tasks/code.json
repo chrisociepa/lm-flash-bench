@@ -1,0 +1,11 @@
+{
+    "name": "code",
+    "friendly_name": "Code",
+    "tasks":  [
+        {"id": 1, "input": "Napisz prostą funkcję o nazwie `dziabacz` w Python 3, która podzieli podany w parametrze string na trzy literowe części oddzielone od siebie znakiem `|` i zwróci nowy string jako wynik. Podaj tylko kod funkcji, bez opisów.", "target": {"type": "python_code", "value": {"call": "dziabacz(\"konstantynopolitańczykowianeczka\")", "result": {"type": "exact_match", "value": "kon|sta|nty|nop|oli|tań|czy|kow|ian|ecz|ka"}}}}, 
+        {"id": 2, "input": "Napisz funkcję o nazwie `licz_samogloski` w pythonie 3, która przyjmuje w parametrze string i zwraca liczbę samogłosek w języku polskim, które w nim występują. Napisz tylko kod funkcji, bez opisów czy komentarzy.", "target": {"type": "python_code", "value": {"call": "licz_samogloski(\"Ale będą i góry u EyI.\")", "result": {"type": "exact_match", "value": "11"}}}}, 
+        {"id": 3, "input": "Napisz funkcję w pythonie 3 o nazwie `znajdz_najdluzsze_slowo`, która przyjmuje w parametrze listę słów (stringów), a jako wynik zwraca najdłuższe słowo z podanej listy. Napisz tylko kod funkcji, bez opisów czy komentarzy.", "target": {"type": "python_code", "value": {"call": "znajdz_najdluzsze_slowo([\"dynia\", \"krasula\", \"drut\", \"jeż\", \"targ\"])", "result": {"type": "exact_match", "value": "krasula"}}}}, 
+        {"id": 4, "input": "Napisz funkcję w pythonie 3 o nazwie `policz_mnie`, która przyjmuje 3 parametry (3 liczby całkowite), a jako wynik zwraca sumę dwóch największych liczb podzieloną przez najmniejszą liczbę. Napisz tylko kod funkcji, bez opisów czy komentarzy.", "target": {"type": "python_code", "value": {"call": "policz_mnie(123, 111, 321)", "result": {"type": "exact_match", "value": "4"}}}}, 
+        {"id": 5, "input": "Napisz funkcję w pythonie 3 o nazwie `najmniej_a`, która przyjmuje jako parametr listę stringów, znajduje string z najmniejszą liczbą wystąpień litery `a` i zwraca go jako wynik. Napisz tylko kod funkcji, bez opisów czy komentarzy.", "target": {"type": "python_code", "value": {"call": "najmniej_a([\"aaa, tam dynia\", \"a tamtaramtam\", \"Ania\", \"nanana\"])", "result": {"type": "exact_match", "value": "Ania"}}}}
+    ]
+}

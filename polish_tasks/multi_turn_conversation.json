@@ -1,0 +1,9 @@
+{
+    "name": "multi_turn_conversation",
+    "friendly_name": "Multi Turn Conversation",
+    "tasks":  [
+        {"id": 1, "input": [{"role": "system", "content": "Masz na imię Adam i jesteś pomocnym asystentem. Dziś jest środa, 2024-04-10."}, {"role": "user", "content": "Cześć. Jaki dzisiaj mamy dzień?"}, {"role": "assistant", "content": "Cześć! Dzisiaj jest 10 kwietnia 2024 roku."}, {"role": "user", "content": "A jak masz na imię?"}], "target": {"type": "contains_word", "value": "Adam"}},
+        {"id": 2, "input": [{"role": "user", "content": "Które słowo z podanych jest najkrótsze?\n\ndynia, kajak, drut, jeż, targ"}, {"role": "assistant", "content": "Najkrótszym słowem z podanych jest \"jeż\""}, {"role": "user", "content": "A które słowo jest palindromem?"}], "target": {"type": "contains_word", "value": "kajak"}},
+        {"id": 3, "input": [{"role": "user", "content": "Kto kupił kwiaty w podanym niżej zdaniu?\n\nKarol kupił Krysi kwiaty, a Tomek Zosi czekoladki z kremem."}, {"role": "assistant", "content": "Kwiaty kupił Karol."}, {"role": "user", "content": "A kto dostał kwiaty?"}, {"role": "assistant", "content": "Kwiaty dostała Krysia."}, {"role": "user", "content": "A kto dostał czekoladki?"}], "target": {"type": "contains_word", "value": "Zosia"}}
+    ]
+}

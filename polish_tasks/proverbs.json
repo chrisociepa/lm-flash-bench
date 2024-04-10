@@ -1,0 +1,11 @@
+{
+    "name": "proverbs",
+    "friendly_name": "Proverbs",
+    "tasks":  [
+        {"id": 1, "input": "Dokończ przysłowie: Gdzie kucharek sześć", "target": {"type": "contains", "value": "tam nie ma co jeść"}},
+        {"id": 2, "input": "Dokończ przysłowie: Baba z wozu", "target": {"type": "contains", "value": "koniom lżej"}},
+        {"id": 3, "input": "Dokończ łamaniec językowy: W czasie suszy", "target": {"type": "contains", "value": "szosa sucha"}},
+        {"id": 4, "input": "Dokończ łamaniec językowy: Jola lojalna, Jola", "target": {"type": "contains_word", "value": "nielojalna"}},
+        {"id": 5, "input": "Dokończ powiedzenie: Bez pracy nie ma", "target": {"type": "contains_word", "value": "kołaczy"}}
+    ]
+}

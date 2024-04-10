@@ -1,0 +1,11 @@
+{
+    "name": "translation",
+    "friendly_name": "Translation",
+    "tasks":  [
+        {"id": 1, "input": "Przetłumacz na angielski: Kiedy zaszło Słońce, ukazał się Księżyc.", "target": {"type": "contains", "value": "when the sun set, the moon appeared"}},
+        {"id": 2, "input": "Przetłumacz na język polski: I'm learning a new language.", "target": {"type": "contains", "value": "uczę się nowego język"}},
+        {"id": 3, "input": "Co oznacza angielski zwrot \"to cut corners\"?\nA. \"skracać narożniki\"\nB. \"oszczędzać na jakości\"\nC. \"zmieniać powierzchnię\"\nD. \"remontować\"\nOdpowiedz krótko A, B, C, D.", "target": {"type": "regex", "value": "\bb[. ]", "negatives": ["\ba[. ]", "\bc[. ]", "\bd[. ]"]}},
+        {"id": 4, "input": "\"Nie wszystko złoto, co się świeci\" - jak brzmi angielski odpowiednik tego polskiego przysłowia?\nA. \"Not everything that is shiny is gold\"\nB. \"Gold is not all that shines\"\nC. \"All that glitters is not gold\"\nD. \"Everything that shines is not gold\"\nOdpowiedz krótko A, B, C, D.", "target": {"type": "regex", "value": "\bc[. ]", "negatives": ["\ba[. ]", "\bb[. ]", "\bd[. ]"]}},
+        {"id": 5, "input": "Przetłumacz na angielski: Jestem elastyczny w tej sprawie.", "target": {"type": "contains", "values_logical_operator": "or", "values": ["i am flexible in this matter.", "i'am flexible in this matter."]}}
+    ]
+}

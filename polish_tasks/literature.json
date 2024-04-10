@@ -1,0 +1,11 @@
+{
+    "name": "literature",
+    "friendly_name": "Literature",
+    "tasks":  [
+        {"id": 1, "input": "Podaj imię chłopca, który w wierszu Juliana Tuwima miał wrzuć list do skrzynki. Napisz tylko to imię, nic więcej.", "target": {"type": "contains", "value": "grześ"}},
+        {"id": 2, "input": "Podaj pierwsze dwa słowa hymnu polski", "target": {"type": "contains", "value": "jeszcze polska"}},
+        {"id": 3, "input": "Podaj brakujący tytuł dla Trylogii Sienkiewicza: \"Ogniem i mieczem\", \"Pan Wołodyjowski\".", "target": {"type": "contains", "value": "potop"}},
+        {"id": 4, "input": "Jakiego kolory włosy miał Adam Niezgódka z Akademii Pana Kleksa?", "target": {"type": "contains", "values_logical_operator": "or", "values": ["rude", "rudy", "rudowłosy"]}},
+        {"id": 5, "input": "W ilu językach napisano biblię?", "target": {"type": "contains", "values_logical_operator": "or", "values": ["trzech", "3"]}}
+    ]
+}
