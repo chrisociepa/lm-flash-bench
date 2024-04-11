@@ -24,12 +24,14 @@ class FlashBench:
         self.logger.info("Benchmark starting")
         os.makedirs(output_dir, exist_ok=True)
         results = self.task_manager.evaluate(self.model_manager, task_names)
-        avg_score = sum(r['score'] for r in results) / len(results)
+        total_score = sum(r['score'] for r in results)
+        avg_score = total_score / len(results)
         num_of_tasks = len(results)
         num_of_subtasks = sum(len(r['tasks']) for r in results)
         timestamp_str = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
         report = {
             "config": config,
+            "total_score": total_score,
             "avg_score": avg_score,
             "number_of_tasks": num_of_tasks,
             "number_of_subtasks": num_of_subtasks,
@@ -37,16 +39,17 @@ class FlashBench:
         }
         with open(os.path.join(output_dir, f"result_{timestamp_str}.json"), "w", encoding="utf-8") as f:
             json.dump(report, f, indent=4, ensure_ascii=False)
-        self.print_summary(results, avg_score, num_of_tasks, num_of_subtasks)
+        self.print_summary(results, total_score, avg_score, num_of_tasks, num_of_subtasks)
         
-    def print_summary(self, results, avg_score, num_of_tasks, num_of_subtasks):
+    def print_summary(self, results, total_score, avg_score, num_of_tasks, num_of_subtasks):
         summary = [f"{'Task (subtasks)'.ljust(40)} Score"]
-        summary.append('-'*30)
+        summary.append('-'*60)
         for r in results:
             num_of_subtasks = len(r['tasks'])
             summary.append(f"{(r['friendly_name'] + ' ('+str(num_of_subtasks)+')').ljust(40)} {r['score']:.4f}")
-        summary.append('-'*30)
-        summary.append(f"{'AVG:'.ljust(40)} {avg_score:.4f}")
+        summary.append('-'*60)
+        summary.append(f"{'TOTAL SCORE:'.ljust(40)} {total_score:.4f}")
+        summary.append(f"{'AVG SCORE:'.ljust(40)} {avg_score:.4f}")
         summary = '\n'.join(summary)
         self.logger.info(f"Summary report for {num_of_tasks} tasks with {num_of_subtasks} subtasks:\n{summary}")
 
